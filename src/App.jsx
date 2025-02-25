@@ -1,13 +1,13 @@
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import { CiCloudDrizzle } from "react-icons/ci";
+import { FaArrowAltCircleUp } from "react-icons/fa";
 
 function App() {
 
   return (
-    <div className='w-full h-full bg-blue-100'>
-      <div className='w-full flex justify-center items-center p-10 drop-shadow-1g transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110'>
+    <div className='w-full h-full bg-blue-50'>
+      <div className='w-full flex justify-center items-center p-10 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110'>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
@@ -21,8 +21,11 @@ function App() {
           부산대학교 KDT 1기 강나현
         </p>
       </div>
-      <p className="read-the-docs justify-items-center">
-        <CiCloudDrizzle className='text-4xl text-blue-400 mb-8 animate-bounce'/>
+      <p className='justify-items-center mb-4'>
+        오늘의 일품은 돼지국밥
+      </p>
+      <p className="read-the-docs justify-items-center text-xs">
+        <FaArrowAltCircleUp className='text-3xl text-blue-900 mb-7 animate-bounce transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110'/>
         Click on the Vite and React logos to learn more
         
       </p>
