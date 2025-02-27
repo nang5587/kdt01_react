@@ -1,3 +1,4 @@
+// import clockimg from './clock.png'
 import clockimg from './clock.png'
 function MyClockImage(){
     return(
