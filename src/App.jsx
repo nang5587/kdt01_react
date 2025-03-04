@@ -4,7 +4,8 @@ import { IoHome } from "react-icons/io5";
 import { PiFileJsxLight } from "react-icons/pi";
 // import MyClock from "./02/MyClock";
 // import Mydiv1 from "./03/Mydiv1";
-import MyList from "./04/MyList";
+// import MyList from "./04/MyList";
+import Lotto from "./05/Lotto";
 function App() {
 
   return (
@@ -37,7 +38,8 @@ function App() {
               <span className="text-red-600 text-xs">아침식사시간 08:20 → 08:00 변경 운영합니다. 많은 이용부탁드립니다.</span>
             </div> */}
       {/* <Mydiv1 /> */}
-      <MyList />
+      {/* <MyList /> */}
+      <Lotto />
 
 
       </main>
