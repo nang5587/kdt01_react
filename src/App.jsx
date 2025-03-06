@@ -5,13 +5,14 @@ import { PiFileJsxLight } from "react-icons/pi";
 // import MyClock from "./02/MyClock";
 // import Mydiv1 from "./03/Mydiv1";
 // import MyList from "./04/MyList";
-import Lotto from "./05/Lotto";
+// import Lotto from "./05/Lotto";
+import FoodMain from "./06/FoodMain";
 function App() {
 
   return (
     <div className='w-full xl:w-8/10 h-screen mx-auto
                     flex flex-col'>
-      <header className="w-full h-20 bg-amber-50
+      <header className="w-full min-h-20 bg-amber-50
                          px-10
                          flex justify-between items-center">
         <div className="text-4xl font-bold text-emerald-900 flex flex-row">
@@ -39,7 +40,8 @@ function App() {
             </div> */}
       {/* <Mydiv1 /> */}
       {/* <MyList /> */}
-      <Lotto />
+      {/* <Lotto /> */}
+      <FoodMain />
 
 
       </main>
