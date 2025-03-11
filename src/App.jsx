@@ -6,7 +6,9 @@ import { PiFileJsxLight } from "react-icons/pi";
 // import Mydiv1 from "./03/Mydiv1";
 // import MyList from "./04/MyList";
 // import Lotto from "./05/Lotto";
-import FoodMain from "./06/FoodMain";
+// import FoodMain from "./06/FoodMain";
+// import MyToggle from "./07/MyToggle";
+import MyEffect from "./08/MyEffect";
 function App() {
 
   return (
@@ -41,8 +43,9 @@ function App() {
       {/* <Mydiv1 /> */}
       {/* <MyList /> */}
       {/* <Lotto /> */}
-      <FoodMain />
-
+      {/* <FoodMain /> */}
+      {/* <MyToggle /> */}
+      <MyEffect />
 
       </main>
       <footer className="w-full h-20 bg-emerald-900 flex justify-center items-center">

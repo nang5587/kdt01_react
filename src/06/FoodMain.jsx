@@ -27,7 +27,7 @@ export default function  FoodMain(){
     //                                     />);
   return (
     <div className="w-11/12">
-        <div className="flex justify-center items-center mb-10">
+        <div className="h-15 flex justify-center items-center mb-10 border-1 border-emerald-800 rounded-xl">
             {bts}
         </div>
         <div className="h-full grid grid-cols-1 lg:grid-cols-2 gap-7">
