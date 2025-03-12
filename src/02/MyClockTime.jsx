@@ -1,8 +1,29 @@
+import { useEffect, useState } from "react";
+import styles from "./MyClockTime.module.css";
 function MyClockTime(){
-    const nTime = new Date();
+    const [currentTime, setCurrentTime] = useState(new Date());
+
+    useEffect(()=>{
+        //1초에 한 번씩 실행됨
+        let tm = setInterval(()=>{
+            setCurrentTime(new Date());
+        }, 1000);
+
+        return ()=>{
+            clearInterval(tm)
+        } 
+
+    }, []);
+
     return(
-        <div className="w-full p-5 text-lime-800 font-bold text-2xl">
-            현재 시각 : {nTime.toLocaleTimeString()}
+        <div className="w-full p-5 text-emerald-700 
+                        font-bold text-2xl text-center">
+            <p className="pst">
+                현재 시각 :
+            </p>
+            <p className={styles.pst}>
+                {currentTime.toLocaleTimeString()}
+            </p>
         </div>
     )
 }
