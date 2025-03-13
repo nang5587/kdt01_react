@@ -9,7 +9,8 @@ import { PiFileJsxLight } from "react-icons/pi";
 // import FoodMain from "./06/FoodMain";
 // import MyToggle from "./07/MyToggle";
 // import MyEffect from "./08/MyEffect";
-import BoxOffice from "./09/BoxOffice";
+// import BoxOffice from "./09/BoxOffice";
+import Traffic from "./10/Traffic";
 function App() {
 
   return (
@@ -47,7 +48,8 @@ function App() {
       {/* <FoodMain /> */}
       {/* <MyToggle /> */}
       {/* <MyEffect /> */}
-      <BoxOffice />
+      {/* <BoxOffice /> */}
+      <Traffic />
 
       </main>
       <footer className="w-full h-20 bg-blue-900 flex justify-center items-center">

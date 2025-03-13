@@ -15,7 +15,7 @@ export default function BoxOffice() {
     let dt = year+month+day ;
     //일일 박스 오피스 정보 가져오기
     const getFetchData = async() => {
-      const mvApiKey = import.meta.env.VITE_APP_API_KEY ;
+      const mvApiKey = import.meta.env.VITE_APP_MV_KEY ;
       let url = 'https://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?';
       url = `${url}key=${mvApiKey}&targetDt=${dt}`;
 
