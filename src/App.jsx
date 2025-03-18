@@ -9,9 +9,9 @@ import { PiFileJsxLight } from "react-icons/pi";
 // import FoodMain from "./06/FoodMain";
 // import MyToggle from "./07/MyToggle";
 // import MyEffect from "./08/MyEffect";
-// import BoxOffice from "./09/BoxOffice";
+import BoxOffice from "./09/BoxOffice";
 // import Traffic from "./10/Traffic";
-import MyRef from "./11/MyRef";
+// import MyRef from "./11/MyRef";/
 function App() {
 
   return (
@@ -20,7 +20,7 @@ function App() {
       <header className="w-full min-h-20 bg-gray-100
                          px-10
                          flex justify-between items-center">
-        <div className="text-4xl font-bold text-blue-950 flex flex-row">
+        <div className="text-4xl font-bold text-black flex flex-row">
           <PiFileJsxLight />
           &nbsp;KDT01_React
           {/* <div className="flex text-sm items-center mx-5">
@@ -49,9 +49,9 @@ function App() {
       {/* <FoodMain /> */}
       {/* <MyToggle /> */}
       {/* <MyEffect /> */}
-      {/* <BoxOffice /> */}
+      <BoxOffice />
       {/* <Traffic /> */}
-      <MyRef />
+      {/* <MyRef /> */}
 
       </main>
       <footer className="w-full h-20 bg-blue-950 flex justify-center items-center">
