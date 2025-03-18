@@ -4,7 +4,7 @@ export default function TailButton({caption, color, onClick}) {
         "blue" : "bg-blue-700",
         "red" : "bg-red-700",
         "emerald" : "bg-emerald-800",
-        "orange" : "bg-orange-700",
+        "orange" : "bg-orange-600",
         "lblue" : "bg-blue-400",
         "gray" : "bg-gray-100"
     }
@@ -16,11 +16,12 @@ export default function TailButton({caption, color, onClick}) {
         "lblue" : "hover:bg-blue-700",
     }
   return (
-    <button onClick={onClick} className={`py-1 px-4 text-base ml-5
+    <button onClick={onClick} className={`py-1 px-4 text-base
                     flex justify-center items-center
                     text-white
                     ${bgHover[color]} hover:font-bold
-                    ${bg[color]} rounded-lg`}>
+                    ${bg[color]} rounded-lg
+                    `}>
       {caption}
     </button>
   )

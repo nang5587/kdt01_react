@@ -10,18 +10,19 @@ import { PiFileJsxLight } from "react-icons/pi";
 // import MyToggle from "./07/MyToggle";
 // import MyEffect from "./08/MyEffect";
 // import BoxOffice from "./09/BoxOffice";
-import Traffic from "./10/Traffic";
+// import Traffic from "./10/Traffic";
+import MyRef from "./11/MyRef";
 function App() {
 
   return (
     <div className='w-full xl:w-8/10 h-screen mx-auto
                     flex flex-col'>
-      <header className="w-full min-h-20 bg-blue-50
+      <header className="w-full min-h-20 bg-gray-100
                          px-10
                          flex justify-between items-center">
         <div className="text-4xl font-bold text-blue-950 flex flex-row">
           <PiFileJsxLight />
-          KDT01_React
+          &nbsp;KDT01_React
           {/* <div className="flex text-sm items-center mx-5">
             <img src={reactLogo} alt="react" className="w-8" /> + 
             <img src={viteLogo} alt="vite" className="w-8" />
@@ -49,10 +50,11 @@ function App() {
       {/* <MyToggle /> */}
       {/* <MyEffect /> */}
       {/* <BoxOffice /> */}
-      <Traffic />
+      {/* <Traffic /> */}
+      <MyRef />
 
       </main>
-      <footer className="w-full h-20 bg-blue-900 flex justify-center items-center">
+      <footer className="w-full h-20 bg-blue-950 flex justify-center items-center">
         <h2 className="text-xs text-white text-center">
           -금정식당 이용안내-<br />
           메뉴선택후(부산대 홈페이지참조) 식권 자판기에서 식권 발권후<br/>
