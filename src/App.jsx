@@ -9,9 +9,10 @@ import { PiFileJsxLight } from "react-icons/pi";
 // import FoodMain from "./06/FoodMain";
 // import MyToggle from "./07/MyToggle";
 // import MyEffect from "./08/MyEffect";
-import BoxOffice from "./09/BoxOffice";
+// import BoxOffice from "./09/BoxOffice";
 // import Traffic from "./10/Traffic";
 // import MyRef from "./11/MyRef";/
+import Gallery from "./12/Gallery";
 function App() {
 
   return (
@@ -20,15 +21,15 @@ function App() {
       <header className="w-full min-h-20 bg-gray-100
                          px-10
                          flex justify-between items-center">
-        <div className="text-4xl font-bold text-black flex flex-row">
-          <PiFileJsxLight />
-          &nbsp;KDT01_React
+        <div className="text-4xl font-bold text-gray-700 flex flex-row">
+          {/* <PiFileJsxLight />&nbsp; */}
+          KDT01_React
           {/* <div className="flex text-sm items-center mx-5">
             <img src={reactLogo} alt="react" className="w-8" /> + 
             <img src={viteLogo} alt="vite" className="w-8" />
           </div> */}
         </div>
-        <div className="text-3xl font-bold text-black">
+        <div className="text-3xl font-bold text-gray-700">
         <IoHome />
         </div>
       </header>
@@ -49,10 +50,10 @@ function App() {
       {/* <FoodMain /> */}
       {/* <MyToggle /> */}
       {/* <MyEffect /> */}
-      <BoxOffice />
+      {/* <BoxOffice /> */}
       {/* <Traffic /> */}
       {/* <MyRef /> */}
-
+      <Gallery />
       </main>
       <footer className="w-full h-20 bg-blue-950 flex justify-center items-center">
         <h2 className="text-xs text-white text-center">

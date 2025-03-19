@@ -16,7 +16,7 @@ export default function TailButton({caption, color, onClick}) {
         "lblue" : "hover:bg-blue-700",
     }
   return (
-    <button onClick={onClick} className={`py-1 px-4 text-base
+    <button onClick={onClick} className={`w-full py-1 px-4 text-base
                     flex justify-center items-center
                     text-white
                     ${bgHover[color]} hover:font-bold

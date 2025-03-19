@@ -7,7 +7,7 @@ export default function BoxOffice() {
     
     //화면에 랜더링 될 상태 변수
     const [tags, setTags] = useState([]);
-    const [botton, setBotton] = useState([]);
+    const [botton, setBotton] = useState('');
     const [ndt, setnDt] = useState();
 
     const getYesterday = () => {
@@ -98,10 +98,10 @@ export default function BoxOffice() {
 
   return (
     <div className="w-11/12">
-    <h2 className="text-2xl font-bold text-left  text-blue-950 flex flex-row">
-      <span><SiThemoviedatabase /></span>&nbsp;&nbsp;일별 박스오피스
+    <h2 className="text-2xl font-bold text-left  text-gray-700 flex flex-row">
+      <span><SiThemoviedatabase /></span>&nbsp;&nbsp;&nbsp;일별 박스오피스
     </h2>
-    <div className="flex justify-end items-center font-bold">
+    <div className="flex justify-end items-center font-bold text-gray-700">
     날짜선택
     <input type="date" ref={refDt} onChange={dateChng} className="my-5 mx-5"/>
     </div>
