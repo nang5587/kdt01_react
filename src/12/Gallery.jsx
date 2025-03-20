@@ -1,5 +1,5 @@
 import TailCard from "../UI/TailCard"
-import TailButton from "../UI/TailButton"
+import GallerySearch from "./GallerySearch";
 import { useEffect, useState, useRef } from "react";
 export default function Gallery() {
     const [tags, setTags] = useState([]);
@@ -30,6 +30,13 @@ export default function Gallery() {
         e.preventDefault();
        setDt(refInfo.current.value);
     }
+
+    const handleReset = (e) => {
+        e.preventDefault();
+        refInfo.current.focus();      
+        refInfo.current.value = '';
+        setTags([]);
+    }
     useEffect(()=>{
         refInfo.current.focus();      
         refInfo.current.value = '';      
@@ -43,29 +50,13 @@ export default function Gallery() {
     }, [dt]);
     
   return (
-    <div>
-        <div className="w-full flex justify-center items-center mb-10">
-            <h2 className="font-bold text-3xl">한국관광공사_관광사진 정보</h2>
-        </div>
-        <div className="w-full">
-            <form className="w-full flex flex-row justify-center items-center mb-10 mx-5">
-            <input ref={refInfo}
-                type="text" name="word" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg
-                focus:ring-blue-500 focus:border-blue-500 block w-3/5 p-1.5 dark:bg-gray-700 dark:border-gray-600
-                dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500
-                    mr-5"/>
-                <span  className="mr-5 w-1/5"><TailButton caption="확인"
-                            color="blue"
-                            onClick={handleClick} /></span>
-                <span className="mr-5 w-1/5"><TailButton caption="취소"
-                            color="blue"
-                            onClick={()=>{}} /></span>
-            </form>
-        </div>
-        <div className="flex justify-center items-center">
-        <div className="w-11/12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-content-center gap-4">
+    <div className="w-10/12 flex flex-col justify-center items-center">
+        <GallerySearch title="한국관광공사 관광사진 정보"
+                        refInfo={refInfo}
+                        handleClick={handleClick}
+                        handleReset={handleReset} />
+        <div className="w-full grid justify-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {tags}
-        </div>
         </div>
     </div>
   )
