@@ -1,7 +1,7 @@
 // import Hello from "./01/Hello"
 // import HelloDate from "./01/HelloDate"
 import { IoHome } from "react-icons/io5";
-import { PiFileJsxLight } from "react-icons/pi";
+// import { PiFileJsxLight } from "react-icons/pi";
 // import MyClock from "./02/MyClock";
 // import Mydiv1 from "./03/Mydiv1";
 // import MyList from "./04/MyList";
@@ -12,8 +12,8 @@ import { PiFileJsxLight } from "react-icons/pi";
 // import BoxOffice from "./09/BoxOffice";
 // import Traffic from "./10/Traffic";
 // import MyRef from "./11/MyRef";/
-import Gallery from "./12/Gallery";
-// import Festival from "./13/Festival";
+// import Gallery from "./12/Gallery";
+import Festival from "./13/Festival";
 function App() {
 
   return (
@@ -54,8 +54,8 @@ function App() {
       {/* <BoxOffice /> */}
       {/* <Traffic /> */}
       {/* <MyRef /> */}
-      <Gallery />
-      {/* <Festival /> */}
+      {/* <Gallery /> */}
+      <Festival />
       </main>
       <footer className="w-full h-20 bg-blue-950 flex justify-center items-center">
         <h2 className="text-xs text-white text-center">
