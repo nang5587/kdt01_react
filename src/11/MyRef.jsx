@@ -61,7 +61,8 @@ export default function MyRef() {
   return (
     <div className="w-full flex justify-center items-center mt-10">
         <div className="w-10/12 flex justify-center items-center">
-            <form className="3/5 grid grid-cols-5 gap-4 bg-gray-50 px-20 py-5">
+            <form className="3/5 grid grid-cols-5 gap-4 bg-white px-20 py-5
+                            place-items-center rounded-2xl">
                     <input type="number" id="num1" ref={refInput1} onFocus={handleInit}
                             className=" bg-gray-50 border text-center font-bold border-gray-300 text-gray-900 
                             text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 
@@ -84,9 +85,10 @@ export default function MyRef() {
                             block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600
                              dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500
                               dark:focus:border-blue-500"/>
-                    <TailButton caption="="
+                    <p className="mt-5"><TailButton caption="="
                                 color="lblue"
                                 onClick={handleCal}/>
+                    </p>
                     <input type="number" id="set" ref={refResult}
                             className=" bg-gray-50 border text-center font-bold border-gray-300 text-gray-900 
                             text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 
