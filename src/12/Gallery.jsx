@@ -9,7 +9,8 @@ export default function Gallery() {
     const getFetchData = async () => {
         const korApiKey = import.meta.env.VITE_APP_API_KEY;
         let url = "https://apis.data.go.kr/B551011/PhotoGalleryService1/gallerySearchList1?" ;
-        url = `${url}serviceKey=${korApiKey}&numOfRows=100&pageNo=1&MobileOS=ETC&MobileApp=AppTest&arrange=A&keyword=%ed%83%9c%ec%a2%85%eb%8c%80&_type=json`;
+        url = `${url}serviceKey=${korApiKey}&numOfRows=100&pageNo=1&MobileOS=ETC&MobileApp=AppTest&arrange=A`;
+        url = `${url}&keyword=${encodeURI(refInfo.current.value)}&_type=json`;
         const resp = await fetch(url);
         const data = await resp.json();
         const dataList = data.response.body.items.item ;
@@ -55,7 +56,7 @@ export default function Gallery() {
                         refInfo={refInfo}
                         handleClick={handleClick}
                         handleReset={handleReset} />
-        <div className="w-full grid justify-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="w-full grid justify-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-10">
             {tags}
         </div>
     </div>
