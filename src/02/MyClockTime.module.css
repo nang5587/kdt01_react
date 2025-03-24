@@ -1,5 +1,7 @@
 .pst {
-    color: white;
+    color: #364153;
     font-weight: bold;
-    background-color: slategrey;
+    background-color: white;
+    border-radius : 500px 500px 500px 500px;
+    padding: 5px;
 }

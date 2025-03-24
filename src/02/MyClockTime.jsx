@@ -16,7 +16,7 @@ function MyClockTime(){
     }, []);
 
     return(
-        <div className="w-full p-5 text-emerald-700 
+        <div className="w-full p-5 
                         font-bold text-2xl text-center">
             <p className="pst">
                 현재 시각 :

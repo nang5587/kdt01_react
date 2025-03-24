@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react"
 import { FaArrowUp, FaArrowDown } from "react-icons/fa6"; 
-import { SiThemoviedatabase } from "react-icons/si";
+import mv from "../assets/mvimg.png"
 export default function BoxOffice() {
     //ref
     const refDt = useRef();
@@ -98,8 +98,8 @@ export default function BoxOffice() {
 
   return (
     <div className="w-11/12">
-    <h2 className="text-2xl font-bold text-left  text-gray-700 flex flex-row">
-      <span><SiThemoviedatabase /></span>&nbsp;&nbsp;&nbsp;일별 박스오피스
+    <h2 className="text-2xl font-bold text-left ml-5 text-gray-700 flex flex-row justify-start items-center">
+      <span className="w-15"><img src={mv} alt="mvimg" /></span>&nbsp;&nbsp;Box Office
     </h2>
     <div className="flex justify-end items-center font-bold text-gray-700">
     날짜선택

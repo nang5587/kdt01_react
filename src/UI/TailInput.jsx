@@ -1,4 +1,4 @@
-import TailButton from "./TailButton"
+
 export default function TailInput({type, id, refInfo, onFocus}) {
   return (
         <form className="w-full flex justify-start items-center mb-5">

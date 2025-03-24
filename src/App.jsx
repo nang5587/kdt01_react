@@ -1,6 +1,7 @@
 // import Hello from "./01/Hello"
 // import HelloDate from "./01/HelloDate"
-import { IoHome } from "react-icons/io5";
+// import { IoHome } from "react-icons/io5";
+import home from "./assets/home.png"
 // import { PiFileJsxLight } from "react-icons/pi";
 // import MyClock from "./02/MyClock";
 // import Mydiv1 from "./03/Mydiv1";
@@ -33,8 +34,9 @@ function App() {
             <img src={viteLogo} alt="vite" className="w-8" />
           </div> */}
         </div>
-        <div className="text-3xl font-bold text-gray-700">
-        <IoHome />
+        <div className="w-15 text-3xl font-bold text-gray-700">
+        {/* <IoHome /> */}
+        <img src={home} alt="home"/>
         </div>
       </header>
       <main className="w-full h-full flex-grow 
@@ -43,10 +45,12 @@ function App() {
                       overflow-y-auto">
       {/* <Hello /> */}
       {/* <MyClock />
-            <div className="text-medium font-bold mt-20 text-center">
-              * 천원아침: 08:00~09:20 <br/>
-              * 아침정식: 08:00~11:00 <br/>
-              <span className="text-red-600 text-xs">아침식사시간 08:20 → 08:00 변경 운영합니다. 많은 이용부탁드립니다.</span>
+            <div className="text-medium font-bold mt-15 text-gray-700 text-center my-5">
+              <p className="my-5">
+                🔈 천원아침: 08:00~09:20 <br/>
+                🔈 아침정식: 08:00~11:00 <br/>
+              </p>
+              <span className="text-sky-800 text-xs bg-white rounded-2xl px-3 py-0.5">아침식사시간 08:20 → 08:00 변경 운영합니다. 많은 이용부탁드립니다.</span>
             </div> */}
       {/* <Mydiv1 /> */}
       {/* <MyList /> */}

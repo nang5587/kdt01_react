@@ -12,19 +12,10 @@ export default function FoodCard({obj}) {
     const handleShow = () => {
         setIsShow(!isShow);
     }
-    // const obj =  {
-    //     "구분": "광역지원센터",
-    //     "시군구": "부산시",
-    //     "사업장명": "부산광역푸드뱅크",
-    //     "신고기준": "당연",
-    //     "사업장 소재지": "부산광역시 동래구 낙민로 25, 부산사회복지종합센터 302호",
-    //     "연락처(대표번호)": "051-791-1377",
-    //     "팩스번호": "051-714-3096",
-    //     "운영주체 분류": "1. 사회복지법인",
-    //     "운영주체명": "부산광역시사회복지협의회"
-    //   }
+
   return (
-    <div className="w-full h-58 border-1 border-gray-400 flex justify-start items-start">
+    <div className="w-full h-58  rounded-2xl text-gray-600 bg-white flex justify-start items-start
+                    shadow-md">
       <div className="w-1/4 flex justify-center pt-3 pl-3">
         <img src={imgs[obj["구분"]]} alt= {obj["구분"]} />
       </div>
@@ -38,10 +29,9 @@ export default function FoodCard({obj}) {
         <div className="h-2/5">
             <p className='text-xs text-gray-500'>{obj["사업장 소재지"]}</p>
         </div>
-        <div className="h-1/5 text-xs bg-gray-500 text-white flex items-center pt-2 pb-2 pl-3
-                        cursor-pointer
-                        " onClick={handleShow}>
-            {isShow && `연락처(대표번호) : ${obj["연락처(대표번호)"]}, 팩스 : ${obj["팩스번호"]}`}
+        <div className="h-1/5 " onClick={handleShow}>
+            <p className='h-11/12 text-xs bg-gray-400 rounded-2xl font-bold text-white flex items-center px-3 py-1
+                        cursor-pointer'>{isShow && `연락처(대표번호) : ${obj["연락처(대표번호)"]}, 팩스 : ${obj["팩스번호"]}`}</p>
         </div>
       </div>
     </div>

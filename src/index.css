@@ -1,5 +1,13 @@
 @import "tailwindcss";
 
+@keyframes tilt {
+  0% { transform: rotate(-5deg); }
+  100% { transform: rotate(5deg); }
+}
+
+.tilt-animation {
+  animation: tilt 1s infinite ease-in-out alternate;
+}
 /* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;

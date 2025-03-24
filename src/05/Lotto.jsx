@@ -33,7 +33,7 @@ export default function Lotto() {
         {lottoTags}
       </div>
       <div className="mt-10 flex">
-        <TailButton caption="로또번호생성" color="blue" onClick={handleLottoNum}/>     
+        <TailButton caption="로또번호생성" color="lblue" onClick={handleLottoNum}/>     
       </div>
     </div>
   )

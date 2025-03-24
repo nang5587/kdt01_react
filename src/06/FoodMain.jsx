@@ -17,17 +17,14 @@ export default function  FoodMain(){
     }
     const bts = category.map(item => <TailButton 
                                     key={item}
-                                    caption={item}
-                                    color={"emerald"}
+                                    caption={item.split('.')[1]}
+                                    color={"white"}
                                     onClick={() => handleCategory(item)}
                                      />)
-    // const tags = fooddata.map(item => <FoodCard 
-    //                                     key={item["사업장명"]}
-    //                                     obj={tags}
-    //                                     />);
+
   return (
     <div className="w-11/12">
-        <div className="h-15 flex justify-center items-center mb-10 border-1 border-emerald-800 rounded-xl">
+        <div className="h-15 flex justify-center items-center mb-10">
             {bts}
         </div>
         <div className="h-full grid grid-cols-1 lg:grid-cols-2 gap-7">

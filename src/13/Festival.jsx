@@ -52,8 +52,8 @@ export default function Festival() {
     <>
     <div className="w-10/12 flex flex-col justify-center items-center">
         <h2 className="w-full flex flex-row justify-center items-center text-3xl text-center font-bold text-gray-600 mb-10">
-            <img src={mark} className="w-10" />
-            &nbsp;부산축제정보
+            <img src={mark} className="w-8" />
+            &nbsp;Busan Festival
         </h2>
         <div className="w-1/2">
             <TailSelect id="text1" refSel={refInfo} items={sel} handleChange={handleChange}/>

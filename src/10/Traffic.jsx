@@ -61,14 +61,14 @@ export default function Traffic() {
 
 
         let infokey = ["사고건수", "사망자수", "중상자수", "경상자수", "부상신고자수"];
-        tm = infokey.map(item => <div key={item} className="w-1/5 flex my-3 ">
-                                    <span className="w-3/5  bg-blue-800 font-bold text-white rounded-xl
+        tm = infokey.map(item => <div key={item} className="w-1/5 flex my-3 text-sm">
+                                    <span className="w-3/5  bg-white shadow-md shadow-white font-bold text-gray-600 rounded-xl
                                                     inline-flex justify-center items-center
                                                     p-2 text-center">
                                         {item}
                                     </span>
                                     <span className="w-2/5 font-bold inline-flex justify-center items-center
-                                                     text-center">
+                                                     text-center text-gray-600 ">
                                         {parseInt(tm[item]).toLocaleString()}
                                     </span>
                                 </div>);

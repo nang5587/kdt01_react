@@ -1,10 +1,10 @@
 
 export default function TailBall({n}) {
     const bgColor = {
-        "n0" : "bg-pink-500",
-        "n1" : "bg-blue-500",
-        "n2" : "bg-cyan-500",
-        "n3" : "bg-indigo-500",
+        "n0" : "bg-yellow-200",
+        "n1" : "bg-green-200",
+        "n2" : "bg-sky-300",
+        "n3" : "bg-purple-300",
         "n4" : "bg-sky-500"
     }
   return (
@@ -15,6 +15,7 @@ export default function TailBall({n}) {
         text-3xl text-white font-bold`
     }>
       {n}
+      <div className="bg-purple-300"></div>
     </div>
   )
 }
