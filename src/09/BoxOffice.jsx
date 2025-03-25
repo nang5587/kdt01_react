@@ -102,8 +102,8 @@ export default function BoxOffice() {
       <span className="w-15"><img src={mv} alt="mvimg" /></span>&nbsp;&nbsp;Box Office
     </h2>
     <div className="flex justify-end items-center font-bold text-gray-700">
-    날짜선택
-    <input type="date" ref={refDt} onChange={dateChng} className="my-5 mx-5"/>
+    <input type="date" ref={refDt} onChange={dateChng} className="my-5 mx-5 px-4 py-1 bg-white border border-gray-200 rounded-lg shadow-sm 
+                          focus:outline-none focus:ring-2 focus:ring-gray-300 focus:border-gray-400 cursor-pointer"/>
     </div>
     <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
       <thead className="text-sm text-gray-700 uppercase bg-gray-100 dark:bg-gray-700 dark:text-gray-400">

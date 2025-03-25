@@ -18,7 +18,7 @@ export default function  FoodMain(){
     const bts = category.map(item => <TailButton 
                                     key={item}
                                     caption={item.split('.')[1]}
-                                    color={"lblue"}
+                                    color={"lorange"}
                                     onClick={() => handleCategory(item)}
                                      />)
 

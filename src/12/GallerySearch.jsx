@@ -6,7 +6,7 @@ export default function GallerySearch({title, refInfo, handleClick, handleReset}
   return (
     <>
         <h2 className="w-full flex flex-row justify-center items-center
-                         font-bold text-3xl text-gray-600 mt-5 mb-10">
+                         font-bold text-3xl text-gray-600 mb-10">
             {title}&nbsp; 
             {/* <img src={kto} className="w-10" /> */}
         </h2>

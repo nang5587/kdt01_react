@@ -24,17 +24,16 @@ function App() {
     <BrowserRouter>
     <div className='w-full xl:w-8/10 h-screen mx-auto
                     flex flex-col'>
-      <header className="w-full min-h-30 bg-linear-to-t from-yellow-50 to-sky-200
-                         px-10
-                         flex justify-between items-center">
-        <div className="text-4xl font-bold text-gray-700 flex flex-row">
+      <header className="max-w-screen-xl w-full mx-auto min-h-30 bg-linear-to-t from-yellow-50 to-sky-200
+                         px-10 flex justify-between items-center">
+        <div className="w-11/12 text-4xl font-bold text-gray-700 flex flex-row">
           {/* <PiFileJsxLight />&nbsp; */}
           KDT01_React&nbsp;&nbsp;&nbsp;
           <p className="text-base text-white truncate">
             ★・・・・・・★・・・・・・★・・・・・・★・・・・・・★・・・・・・★・・・・・・★・・・・・・★・・・・・・★・・・・・・★・・・・・・★・・・・・・★・・・・・・★・・・・・・★
           </p>
         </div>
-        <div className="w-20 text-3xl font-bold text-gray-700">
+        <div className="w-1/12 text-3xl font-bold text-gray-700">
         <Link to="/">
           <img src={home} alt="home"/>
         </Link>
@@ -44,7 +43,7 @@ function App() {
                        bg-yellow-50
                       flex flex-col justify-start items-center
                       overflow-y-auto">
-      <ul className="w-11/12 h-15 bg-white rounded-2xl flex flex-row justify-center items-center
+      <ul className="w-11/12 min-h-16 py-4 bg-white rounded-2xl flex flex-row justify-center items-center
                      border-1 border-gray-100 shadow-md shadow-gray-300 mb-20 truncate">
         <li>
           <Link to="/lotto" className="w-20 h-full inline-flex text-lg text-gray-600 font-bold px-4 py-2 mr-5
