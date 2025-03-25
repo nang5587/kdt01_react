@@ -51,7 +51,7 @@ export default function Festival() {
   return (
     <>
     <div className="w-10/12 flex flex-col justify-center items-center">
-        <h2 className="w-full flex flex-row justify-center items-center text-3xl text-center font-bold text-gray-600 mb-10">
+        <h2 className="w-full flex flex-row justify-center items-center text-4xl text-center font-bold text-gray-600 mb-10">
             <img src={mark} className="w-8" />
             &nbsp;Busan Festival
         </h2>

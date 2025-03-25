@@ -17,8 +17,8 @@ function MyClockTime(){
 
     return(
         <div className="w-full p-5 
-                        font-bold text-2xl text-center">
-            <p className="pst">
+                        font-bold text-2xl text-gray-600 text-center">
+            <p className="mt-10">
                 현재 시각 :
             </p>
             <p className={styles.pst}>

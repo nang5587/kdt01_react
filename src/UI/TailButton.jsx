@@ -19,9 +19,8 @@ export default function TailButton({caption, color, onClick}) {
   return (
     <button onClick={onClick} className={`w-full py-1 px-4 text-base
                     flex justify-center items-center mr-5 mb-5
-                    
                     ${bgHover[color]} hover:font-bold
-                    ${bg[color]} rounded-lg
+                    ${bg[color]} rounded-2xl shadow-md shadow-gray-300
                     `}>
       {caption}
     </button>
