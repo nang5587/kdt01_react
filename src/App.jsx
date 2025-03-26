@@ -24,9 +24,9 @@ function App() {
     <BrowserRouter>
     <div className='w-full xl:w-8/10 h-screen mx-auto
                     flex flex-col'>
-      <header className="max-w-screen-xl w-full mx-auto min-h-30 bg-linear-to-t from-yellow-50 to-sky-200
+      <header className="w-full mx-auto min-h-30 bg-linear-to-t from-yellow-50 to-sky-200
                          px-10 flex justify-between items-center">
-        <div className="w-11/12 text-4xl font-bold text-gray-700 flex flex-row">
+        <div className=" text-4xl font-bold text-gray-700 flex flex-row">
           {/* <PiFileJsxLight />&nbsp; */}
           KDT01_React&nbsp;&nbsp;&nbsp;
           <p className="text-base text-white truncate">
