@@ -1,4 +1,4 @@
-import { useLocation, useSearchParams } from "react-router-dom"
+import { useSearchParams } from "react-router-dom"
 import { useRef, useEffect, useState } from "react";
 import getdata from "./getcode.json"
 import TailSelect from "../UI/TailSelect";
@@ -17,20 +17,8 @@ export default function FcstList() {
   let selList = getdata.filter( item => item["예보구분"] == gubun)
                     .map(item => `${item["항목명"]}(${item["항목값"]})`);
 
-
-  // {
-  //   "baseDate": "20250327",
-  //   "baseTime": "0500",
-  //   "category": "TMP",
-  //   "fcstDate": "20250327",
-  //   "fcstTime": "0600",
-  //   "fcstValue": "17",
-  //   "nx": 98,
-  //   "ny": 76
-  //   }
-
   const getFetchData = async () => {
-    const apiKey = import.meta.env.VITE_APP_API_KEY;
+    const apiKey = import.meta.env.VITE_APP_API_KEY; 
     let gb ="";
     let baseTime ="";
 
@@ -55,8 +43,6 @@ export default function FcstList() {
     const tm = data.response.body.items.item;
     setData(tm);
     console.log(tm);
-
-    
   }
 
   const handleChange = () => {
@@ -92,6 +78,7 @@ export default function FcstList() {
 
   useEffect(()=>{
      getFetchData();
+     
   }, []);
 
   useEffect(()=>{
