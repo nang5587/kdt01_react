@@ -77,12 +77,11 @@ export default function FcstList() {
   }
 
   useEffect(()=>{
-     getFetchData();
-     
+    getFetchData();
   }, []);
-
+  
   useEffect(()=>{
-    
+    handleChange();  
   }, [data]);
 
   return (
