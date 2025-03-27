@@ -1,21 +1,13 @@
-// import Hello from "./01/Hello"
-// import HelloDate from "./01/HelloDate"
-// import { IoHome } from "react-icons/io5";
 import home from "./assets/home.png"
-// import { PiFileJsxLight } from "react-icons/pi";
 import MyClock from "./02/MyClock";
-// import Mydiv1 from "./03/Mydiv1";
-// import MyList from "./04/MyList";
 import Lotto from "./05/Lotto";
 import FoodMain from "./06/FoodMain";
-// import MyToggle from "./07/MyToggle";
-// import MyEffect from "./08/MyEffect";
 import BoxOffice from "./09/BoxOffice";
 import Traffic from "./10/Traffic";
-// import MyRef from "./11/MyRef";
 import Gallery from "./12/Gallery";
 import Festival from "./13/Festival";
-// import RouteMain from "./14/RouteMain"
+import Fcst from "./15/Fcst";
+import FcstList from "./15/FcstList";
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import { Link } from "react-router-dom";
 function App() {
@@ -35,7 +27,7 @@ function App() {
         </div>
         <div className="w-1/12 text-3xl font-bold text-gray-700">
         <Link to="/">
-          <img src={home} alt="home"/>
+          <img src={home} alt="home" className="w-4/5"/>
         </Link>
         </div>
       </header>
@@ -81,6 +73,12 @@ function App() {
                 Festival
           </Link>
         </li>
+        <li>
+          <Link to="/fcst"  className="w-20 h-full inline-flex text-lg text-gray-600 font-bold px-4 py-2 mr-5
+                        justify-center">
+                Weather
+          </Link>
+        </li>
       </ul>
       <Routes>
             <Route path="/" element={<MyClock />}/>
@@ -90,15 +88,9 @@ function App() {
             <Route path="/Traffic" element={<Traffic />}/>
             <Route path="/gallery" element={<Gallery />}/>
             <Route path="/festival" element={<Festival />}/>
+            <Route path="/fcst" element={<Fcst />}/>
+            <Route path="/fcstList" element={<FcstList />}/>
       </Routes>                  
-      {/* <MyClock />
-            <div className="text-medium font-bold mt-15 text-gray-700 text-center my-5">
-              <p className="my-5">
-                🔈 천원아침: 08:00~09:20 <br/>
-                🔈 아침정식: 08:00~11:00 <br/>
-              </p>
-              <span className="text-sky-800 text-xs bg-white rounded-2xl px-3 py-0.5">아침식사시간 08:20 → 08:00 변경 운영합니다. 많은 이용부탁드립니다.</span>
-            </div> */}
       </main>
       <footer className="w-full h-20  bg-linear-to-t from-sky-200 to-yellow-50 flex justify-center items-center">
         <h2 className="text-xs text-gray-700 font-bold text-center">

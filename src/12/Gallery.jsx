@@ -13,9 +13,10 @@ export default function Gallery() {
         let url = "https://apis.data.go.kr/B551011/PhotoGalleryService1/gallerySearchList1?" ;
         url = `${url}serviceKey=${korApiKey}&numOfRows=100&pageNo=1&MobileOS=ETC&MobileApp=AppTest&arrange=A`;
         url = `${url}&keyword=${encodeURI(refInfo.current.value)}&_type=json`;
+        
         const resp = await fetch(url);
         const data = await resp.json();
-        const dataList = data.response.body.items.item ;
+        const dataList = data.response.body.items.item;
         let tm = dataList.map(item => 
                                         <TailCard
                                         key={item.galContentId} 
@@ -43,7 +44,7 @@ export default function Gallery() {
     }
     useEffect(()=>{
         refInfo.current.focus();      
-        refInfo.current.value = '';      
+        refInfo.current.value = '';    
     }, []);
 
     useEffect(()=>{
@@ -64,7 +65,7 @@ export default function Gallery() {
                     <div className="w-12 h-12 border-4 border-blue-300 border-t-transparent rounded-full animate-spin"></div>
                 </div>
             ) : (
-                <div className="w-full grid justify-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-10">
+                <div className="w-full grid justify-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 my-10">
                     {tags}
                 </div>
             )}
