@@ -18,12 +18,12 @@ function App() {
                     flex flex-col'>
       <header className="w-full mx-auto min-h-30 bg-linear-to-t from-yellow-50 to-sky-200
                          px-10 flex justify-between items-center">
-        <div className=" text-4xl font-bold text-gray-700 flex flex-row">
+        <div className="w-11/12 text-4xl font-bold text-gray-700 flex flex-row">
           {/* <PiFileJsxLight />&nbsp; */}
-          KDT01_React&nbsp;&nbsp;&nbsp;
-          <p className="text-base text-white truncate">
+          <div>KDT01_React&nbsp;&nbsp;&nbsp;</div>
+          <div className=" text-base text-white truncate">
             ★・・・・・・★・・・・・・★・・・・・・★・・・・・・★・・・・・・★・・・・・・★・・・・・・★・・・・・・★・・・・・・★・・・・・・★・・・・・・★・・・・・・★・・・・・・★
-          </p>
+          </div>
         </div>
         <div className="w-1/12 text-3xl font-bold text-gray-700">
         <Link to="/">

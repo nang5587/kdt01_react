@@ -48,16 +48,51 @@ export default function FcstList() {
   const handleChange = () => {
     let sel = refsel.current.value.split('(')[1].replace(')', '');
     let data2 = data.filter(item => item["category"] == sel);
-    // refsel.current.value = sel;
-    console.log(data2);
-    console.log(sel);
 
+    const weatherIcon = (category, value) => {
+
+      const icons = {
+        PCP : {
+          0: '강수없음',
+          1: '🌧️ 약한 비',
+          2: '🌧️ 보통 비',
+          3: '🌧️ 강한 비',
+        },
+
+        SKY : {
+          1: '☀️ 맑음',
+          3: '☁️ 구름',
+          4: '🌫️ 흐림',
+        },
+
+        PTY : {
+          0: '☀️',
+          1: '🌧️ 비',
+          2: '🌨️ 비/눈',
+          3: '❄️ 눈',
+          4: '🌧️ 소나기',
+          5: '💧 빗방울',
+          6: '💧❄️ 빗방울눈날림',
+          7: '❄️ 눈날림'
+        }
+
+      };
+      
+
+      return icons[category]?.[String(value)] || `${value}`;
+    };
+
+    let unit = '';
     let p = getdata.filter(item => item["항목값"] == sel)[0];
-    p = p["단위"];
-    console.log(p);
+    if (p["단위"] == '코드값') {
+      unit = '';
+    }
+
+
     let table = data2.map(item => 
       <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200
-                                                                                                             hover:bg-gray-50 dark:hover:bg-gray-600 hover:cursor-pointer hover:font-bold">
+                     hover:bg-gray-50 dark:hover:bg-gray-600 hover:cursor-pointer hover:font-bold"
+                     key={item.fcstDate + item.fcstTime}>
                                             <td className="px-6 p-4 text-center">
                                               {refsel.current.value}
                                             </td>
@@ -68,7 +103,7 @@ export default function FcstList() {
                                               {item.fcstTime.slice(0,2)+":"+item.fcstTime.slice(2,4)}
                                             </td>
                                             <td className=" px-6 py-4 text-center">
-                                              {item.fcstValue}{p}
+                                              {weatherIcon(item.category, item.fcstValue)}{unit}
                                             </td>
                                           </tr>
     );
