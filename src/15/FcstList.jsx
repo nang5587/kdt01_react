@@ -5,7 +5,7 @@ import TailSelect from "../UI/TailSelect";
 export default function FcstList() {
   const refsel = useRef();
   const [tags, setTags] = useState([]);
-  const [data, setData] = useState([]);
+  const [data, setData] = useState();
   const [sParams] = useSearchParams();
 
   let dt = sParams.get('dt');
@@ -50,7 +50,6 @@ export default function FcstList() {
     let data2 = data.filter(item => item["category"] == sel);
 
     const weatherIcon = (category, value) => {
-
       const icons = {
         PCP : {
           0: '강수없음',
@@ -66,7 +65,7 @@ export default function FcstList() {
         },
 
         PTY : {
-          0: '☀️',
+          0: '☀️ 맑음',
           1: '🌧️ 비',
           2: '🌨️ 비/눈',
           3: '❄️ 눈',
@@ -74,36 +73,49 @@ export default function FcstList() {
           5: '💧 빗방울',
           6: '💧❄️ 빗방울눈날림',
           7: '❄️ 눈날림'
-        }
+        },
+
 
       };
-      
+      let unit = '';
+      let p = getdata.filter(item => item["항목값"] == sel)[0];
+      console.log('p', p)
+      unit = p["단위"];
 
-      return icons[category]?.[String(value)] || `${value}`;
+      switch (category) {
+        case 'UUU' : value = value.slice(0, 1) == '-' ? value.replace('-', '서 ') : '동 ' + value;
+        break;
+        case 'VVV' : value = value.slice(0, 1) == '-' ? value.replace('-', '남 ') : '북 ' + value;
+        break;
+        case 'WAV' : value = value == '999' || value == '-999' ? '자료없음' : value;
+        break;
+      }
+
+      if(value == "자료없음"){
+        unit = '';
+      }
+
+      return icons[category]?.[String(value)] || `${value}${unit}`;
     };
 
-    let unit = '';
-    let p = getdata.filter(item => item["항목값"] == sel)[0];
-    if (p["단위"] == '코드값') {
-      unit = '';
-    }
+    
 
 
     let table = data2.map(item => 
       <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200
                      hover:bg-gray-50 dark:hover:bg-gray-600 hover:cursor-pointer hover:font-bold"
                      key={item.fcstDate + item.fcstTime}>
-                                            <td className="px-6 p-4 text-center">
+                                            <td className="px-6 p-4 text-center font-medium text-gray-900">
                                               {refsel.current.value}
                                             </td>
-                                            <td className=" px-6 py-4 text-center font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                            <td className=" px-6 py-4 text-center ">
                                               {item.fcstDate.slice(0,4)+"-"+item.fcstDate.slice(4,6)+"-"+item.fcstDate.slice(6,8)}
                                             </td>
                                             <td className=" px-6 py-4 text-center">
                                               {item.fcstTime.slice(0,2)+":"+item.fcstTime.slice(2,4)}
                                             </td>
                                             <td className=" px-6 py-4 text-center">
-                                              {weatherIcon(item.category, item.fcstValue)}{unit}
+                                              {weatherIcon(item.category, item.fcstValue)}
                                             </td>
                                           </tr>
     );
@@ -116,13 +128,15 @@ export default function FcstList() {
   }, []);
   
   useEffect(()=>{
+    if (!data) return;
+
     handleChange();  
   }, [data]);
 
   return (
     <div className="w-full flex flex-col justify-center items-center">
       <div className="w-10/12 grid grid-cols-2 gap-5 place-items-center mb-5">
-        <h2 className="w-full text-2xl text-gray-600 font-bold truncate">{si} {gubun} ({dt})</h2>
+        <h2 className="w-full text-2xl text-gray-600 font-bold truncate"> {si} {gubun} ({dt})</h2>
         <p className="w-full"><TailSelect
                                           id="selName"
                                           refSel={refsel}

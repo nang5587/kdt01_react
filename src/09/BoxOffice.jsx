@@ -98,46 +98,46 @@ export default function BoxOffice() {
 
   return (
     <div className="w-11/12">
-    <h2 className="text-2xl font-bold text-left ml-5 text-gray-700 flex flex-row justify-start items-center">
-      <span className="w-15"><img src={mv} alt="mvimg" /></span>&nbsp;&nbsp;Box Office
-    </h2>
-    <div className="flex justify-end items-center font-bold text-gray-700">
-    <input type="date" ref={refDt} onChange={dateChng} className="my-5 mx-5 px-4 py-1 bg-white border border-gray-200 rounded-lg shadow-sm 
-                          focus:outline-none focus:ring-2 focus:ring-gray-300 focus:border-gray-400 cursor-pointer"/>
-    </div>
-    <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-      <thead className="text-sm text-gray-700 uppercase bg-gray-100 dark:bg-gray-700 dark:text-gray-400">
-        <tr>
-          <td className="w-20 font-bold px-6 py-3 text-center">
-            순위
-          </td>
-          <th className="min-w-auto px-6 py-3 text-center">
-            영화명
-          </th>
-          <th className="min-w-auto px-6 py-3 text-center w-1/7">
-            매출액
-          </th>
-          <th className="min-w-auto  px-6 py-3 text-center w-1/7">
-            관객수
-          </th>
-          <th className="min-w-auto  px-6 py-3 text-center w-1/7">
-            누적 매출액
-          </th>
-          <th className="min-w-auto  px-6 py-3 text-center w-1/7">
-            누적 관객수
-          </th>
-          <th className="min-w-auto  px-6 py-3 text-center w-24">
-            증감율
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        {tags}          
-      </tbody>
-      <tfoot>
-        {botton}         
-      </tfoot>
-    </table>
+      <h2 className="text-3xl font-bold text-left ml-5 text-gray-700 flex flex-row justify-start items-center">
+        <span className="w-15"><img src={mv} alt="mvimg" /></span>&nbsp;&nbsp;Box Office
+      </h2>
+      <div className="flex justify-end items-center font-bold text-gray-700">
+      <input type="date" ref={refDt} onChange={dateChng} className="my-5 mx-5 px-4 py-1 bg-white border border-gray-200 rounded-lg shadow-sm 
+                            focus:outline-none focus:ring-2 focus:ring-gray-300 focus:border-gray-400 cursor-pointer"/>
+      </div>
+      <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+        <thead className="text-sm text-gray-700 uppercase bg-gray-100 dark:bg-gray-700 dark:text-gray-400">
+          <tr>
+            <td className="w-20 font-bold px-6 py-3 text-center">
+              순위
+            </td>
+            <th className="min-w-auto px-6 py-3 text-center">
+              영화명
+            </th>
+            <th className="min-w-auto px-6 py-3 text-center w-1/7">
+              매출액
+            </th>
+            <th className="min-w-auto  px-6 py-3 text-center w-1/7">
+              관객수
+            </th>
+            <th className="min-w-auto  px-6 py-3 text-center w-1/7">
+              누적 매출액
+            </th>
+            <th className="min-w-auto  px-6 py-3 text-center w-1/7">
+              누적 관객수
+            </th>
+            <th className="min-w-auto  px-6 py-3 text-center w-24">
+              증감율
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          {tags}          
+        </tbody>
+        <tfoot>
+          {botton}         
+        </tfoot>
+      </table>
     
   </div>
   )

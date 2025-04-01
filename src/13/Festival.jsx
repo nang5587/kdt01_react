@@ -17,7 +17,7 @@ export default function Festival() {
         const data = await resp.json();
         console.log(url);
         const dataList = data.getFestivalKr.item;
-        console.log(dataList);
+        console.log('dt', dataList);
 
         setDt(dataList)
     }
@@ -30,7 +30,9 @@ export default function Festival() {
         let tm = dt.map(item => item["GUGUN_NM"]);
         let list = [...new Set(tm)];
         list = list.sort();
+        list = ['---구 선택---', ...list];
         setSel(list);
+        handleChange();
     }, [dt]);
 
     const handleChange = ()=>{
@@ -51,7 +53,7 @@ export default function Festival() {
   return (
     <>
     <div className="w-10/12 flex flex-col justify-center items-center">
-        <h2 className="w-full flex flex-row justify-center items-center text-4xl text-center font-bold text-gray-600 mb-10">
+        <h2 className="w-full flex flex-row justify-center items-center text-3xl text-center font-bold text-gray-600 mb-10">
             <img src={mark} className="w-8" />
             &nbsp;Busan Festival
         </h2>

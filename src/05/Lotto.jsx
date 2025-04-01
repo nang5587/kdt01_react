@@ -28,7 +28,7 @@ export default function Lotto() {
         console.log(lottoNum);
     }
   return (
-    <div className="w-11/12 h-full flex flex-col justify-center items-center">
+    <div className="w-11/12 flex flex-col justify-center items-center">
       <div className="w-full flex justify-center items-center mb-10">
         {lottoTags}
       </div>

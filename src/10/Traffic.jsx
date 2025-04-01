@@ -69,7 +69,7 @@ export default function Traffic() {
     }, [selC2]);
 
     return (
-        <div className="w-full h-full flex flex-col items-center p-5">
+        <div className="w-full flex flex-col items-center p-5">
             
             <div className="w-full flex flex-col jus items-center">
                 {c1.length > 0 && <TrafficNav title="대분류" ct={c1} selc={selC1} setSelC={setSelC1} />}

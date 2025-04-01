@@ -33,6 +33,10 @@ export default function Gallery() {
 
     const handleClick = (e) => {
         e.preventDefault();
+        if(refInfo.current.value == ''){
+            alert('검색어를 입력하세요');
+            refInfo.current.focus();
+        }
        setDt(refInfo.current.value);
     }
 
